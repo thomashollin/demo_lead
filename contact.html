@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Demo Site</title>
+
+    <!-- ✅ Google Tag Manager (HEAD) -->
+    <!-- Ersetze diesen Platzhalter durch deinen echten GTM Head-Snippet (GTM-XXXXXXX) -->
+    <!-- <script>(function(w,d,s,l,i){/* ... */})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+
+    <!-- ✅ Brevo Tracking (HEAD) -->
+    <!-- Füge hier dein Brevo/Sendinblue Tracking Script ein -->
+    <!-- <script>/* Brevo tracker */</script> -->
+
+  </head>
+  <body>
+
+    <!-- ✅ Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
+
+  <header class="nav">
+    <div class="inner container">
+      <div class="logo">Demo</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Produkte</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="signup.html">Anmeldung</a>
+      </nav>
+    </div>
+  </header>
+
+
+    <main class="container section">
+      <h1>Kontakt</h1>
+      <div class="grid">
+        <div class="card">
+          <h3>Brevo Formular (empfohlen)</h3>
+          <p class="small">Ersetze den Platzhalter unten durch deinen <strong>Brevo Formular‑Embed</strong> (Contacts → Forms). So landen Kontakte direkt in deiner Liste und das Tracking in Brevo funktioniert sofort.</p>
+          <!-- 🔁 BREVO CONTACT FORM EMBED – bitte durch echten Embed-Code ersetzen -->
+          <div class="notice">Platzhalter‑Bereich für Brevo Formular‑Embed.</div>
+          <!-- 🔁 ENDE BREVO EMBED -->
+        </div>
+        <div class="card">
+          <h3>Fallback Formular (HTML‑Demo)</h3>
+          <form class="form" id="contactForm">
+            <label for="c_email">E‑Mail</label>
+            <input id="c_email" type="email" required placeholder="dein@mail.de">
+            <label for="c_name">Name</label>
+            <input id="c_name" type="text" placeholder="Max Mustermann">
+            <label for="c_msg">Nachricht</label>
+            <textarea id="c_msg" rows="4" placeholder="Hallo…"></textarea>
+            <label><input id="c_consent" type="checkbox" required> Ich willige in die Verarbeitung meiner Daten gemäß Datenschutzhinweis ein.</label>
+            <button class="btn" type="submit" data-gtm="contact_submit_demo">Senden</button>
+            <p class="small">Hinweis: Dieses Demo‑Formular sendet keine E‑Mails – es pusht ein GTM‑/GA4‑Event, damit du die Conversion testen kannst.</p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      (function(){{
+        var f = document.getElementById('contactForm');
+        if(!f) return;
+        f.addEventListener('submit', function(e){{
+          e.preventDefault();
+          var email = document.getElementById('c_email').value || '';
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({{event:'contact_submit_demo', email_domain:(email.split('@')[1]||''), has_message:!!document.getElementById('c_msg').value}});
+          alert('Demo: Formular-Event an GTM/GA4 gepusht. Ersetze in der Praxis durch Brevo-Embed.');
+          f.reset();
+        }});
+      }})();
+    </script>
+
+    <footer>© Demo – GitHub Pages</footer>
+    <script src="assets/scripts.js"></script>
+  </body>
+</html>

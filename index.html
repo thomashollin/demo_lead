@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Demo Site</title>
+
+    <!-- ✅ Google Tag Manager (HEAD) -->
+    <!-- Ersetze diesen Platzhalter durch deinen echten GTM Head-Snippet (GTM-XXXXXXX) -->
+    <!-- <script>(function(w,d,s,l,i){/* ... */})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+
+    <!-- ✅ Brevo Tracking (HEAD) -->
+    <!-- Füge hier dein Brevo/Sendinblue Tracking Script ein -->
+    <!-- <script>/* Brevo tracker */</script> -->
+
+  </head>
+  <body>
+
+    <!-- ✅ Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
+
+  <header class="nav">
+    <div class="inner container">
+      <div class="logo">Demo</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Produkte</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="signup.html">Anmeldung</a>
+      </nav>
+    </div>
+  </header>
+
+
+    <main class="hero container">
+      <div class="card">
+        <span class="badge">Multipage</span>
+        <h1>Willkommen zur Demo‑Webseite</h1>
+        <p class="lead">Mehrere Seiten, moderne Optik, und sofort testbares Tracking mit <strong>GTM</strong>, <strong>GA4</strong> und <strong>Brevo</strong>.</p>
+        <p class="small notice">UTM testen: <code>?utm_source=test&utm_medium=email&utm_campaign=demo</code></p>
+        <div style="display:flex;gap:12px;margin-top:10px">
+          <a class="btn" href="products.html" data-gtm="home_to_products">Produkte ansehen</a>
+          <a class="btn" href="contact.html" data-gtm="home_to_contact">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <div class="card product-card">
+          <h3>Produkt A</h3>
+          <p>Kurzbeschreibung. Ideal zum Testen von CTA‑Klicks.</p>
+          <p class="price">€ 19 / mtl.</p>
+          <a class="btn" href="product-a.html" data-gtm="view_product_a">Details</a>
+        </div>
+        <div class="card product-card">
+          <h3>Produkt B</h3>
+          <p>Scroll‑/Zeit‑Events & Bewertung möglich.</p>
+          <p class="price">€ 49 / mtl.</p>
+          <a class="btn" href="product-b.html" data-gtm="view_product_b">Details</a>
+        </div>
+        <div class="card product-card">
+          <h3>Produkt C</h3>
+          <p>UTM‑Segmentierung in Brevo ausprobieren.</p>
+          <p class="price">€ 99 / mtl.</p>
+          <a class="btn" href="product-c.html" data-gtm="view_product_c">Details</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>© Demo – GitHub Pages</footer>
+    <script src="assets/scripts.js"></script>
+  </body>
+</html>
